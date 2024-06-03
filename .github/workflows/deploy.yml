@@ -20,7 +20,7 @@ jobs:
       - name: ❇️ Setup Node.js environment
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: 16.x
+          node-version: 16.10
 
       - name: 🔷 Set up Expo
         uses: expo/expo-github-action@v7
@@ -29,11 +29,11 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
 
       - name: 📦 Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: 🌐 Export the app
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn deploy -- -u "github-actions-bot <support+actions@github.com>"
+          npm deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
