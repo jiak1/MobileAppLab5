@@ -1,7 +1,11 @@
 {
   "expo": {
-    "name": "Lab1",
-    "slug": "Lab1",
+    "experiments": {
+      "baseUrl": "/MobileAppLab5"
+    },
+    "name": "lab5",
+    "slug": "lab5",
+    "jsEngine": "hermes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
